@@ -28,12 +28,12 @@ connection.onreconnected((connectionId) => {
 // });
 
 
-connection.on("ReceiveMessageSelf", (message) => {
-    let chatbubbleSelf = createChatBubbleSelf({
-        content: message
-    })
-    $(".chat-bubbles").appendChild(chatbubbleSelf)
-});
+// connection.on("ReceiveMessageSelf", (message) => {
+//     let chatbubbleSelf = createChatBubbleSelf({
+//         content: message
+//     })
+//     $(".chat-bubbles").appendChild(chatbubbleSelf)
+// });
 
 
 connection.start().then(() => {
