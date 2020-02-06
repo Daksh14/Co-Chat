@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - aspnetcoreapp</title>
+
+    <link href="@Url.Content("~/css/Muli.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", false)
+
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="is-snackBar">
+        <p>This is a test message</p>
+    </div>
+    <script src="@Url.Content("~/lib/jquery/dist/jquery.min.js")" defer></script>
+    <script src="@Url.Content("~/js/site.js")" asp-append-version="true" defer></script>
+    <script src="@Url.Content("~/js/signalr/dist/browser/signalr.min.js")" asp-append-version="true" defer></script>
+    <script src="@Url.Content("~/js/chat.js")" asp-append-version="true" defer></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

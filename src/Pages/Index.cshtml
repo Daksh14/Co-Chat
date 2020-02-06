@@ -1,0 +1,71 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@Html.AntiForgeryToken()
+@section Styles {
+    <link href="@Url.Content("~/css/loader.css")" rel="stylesheet" type="text/css" />
+}
+<div class="left-bar--profile">
+    <div class="is-nner-container">
+        <div class="profile-main">
+           <img src="https://i.pravatar.cc/300">
+        </div>
+        <div class="down--section">
+            <p class="username has-white-color">Username</p>
+            <div class="bottom--section">
+                <div>
+                    <img src="~/img/home.svg">
+                    <p class="has-white-color">Home</p>
+                </div>
+                <div>
+                    <img src="~/img/home.svg">
+                    <p class="has-white-color">Settings</p>
+                </div>
+                <div>
+                    <img src="~/img/home.svg">
+                    <p class="has-white-color">Meta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="chat-rooms">
+    <div class="is-inner-container has-low-right-padding">
+        <h1 class="has-ligher-font has-white-color">Chats</h1>
+        <h4 class="has-ligher-font has-opacity has-white-color">Your rooms</h4>
+        <input class="is-search" placeholder="Search your rooms.">
+        <div class="room-container">
+            <div class="semi-circle-spin is-center-horizontal has-top-margin"><div></div></div>
+        </div>
+    </div>
+</div>
+<div class="actual-chat">
+    <div class="is-inner-container has-low-left-padding">
+        <div class="is-chat-room-nameholder">
+            <h1 class="has-white-color has-ligher-font js--room-name-container">
+                Select a Chat Room
+            </h1>
+            <img src="~/img/ellipsis.svg">
+        </div>
+        <h4 class="has-ligher-font has-opacity has-white-color">Some information</h4>
+        <hr>
+        <div class="chat-body">
+            <div class="chat-bubbles has-no-overflow">
+                <div class="is-loading-screen">
+                    <div class="pacman"><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+            </div>
+            <div class="chat-body-footer">
+                <textarea class="is-chat-textbox" disabled></textarea>
+                <div class="sent-chat">
+                    <img src="~/img/emoji.svg">
+                </div>
+                <div class="sent-chat">
+                    <img src="~/img/attachment.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
